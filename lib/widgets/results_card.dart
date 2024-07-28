@@ -40,7 +40,14 @@ class ResultsCard extends StatelessWidget {
     return SizedBox(
       width: MediaQuery.of(context).size.width * 0.888,
       height: MediaQuery.of(context).size.height * 0.75,
-      child: Stack(
+      child: Container(
+        margin: EdgeInsets.only(
+          left: MediaQuery.of(context).size.width * 0.1, // Adjust factor for left margin
+          right: MediaQuery.of(context).size.width * 0.1, // Adjust factor for right margin
+          top: MediaQuery.of(context).size.height * 0.1, // Adjust factor for top margin
+          bottom: MediaQuery.of(context).size.height * 0.1, // Adjust factor for bottom margin
+        ),
+        child: Stack(
         children: [
           Card(
             surfaceTintColor: cardBgColor,
@@ -165,6 +172,7 @@ class ResultsCard extends StatelessWidget {
             ),
           ),
         ],
+        ),
       ),
     );
   }
